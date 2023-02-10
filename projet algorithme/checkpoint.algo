@@ -1,0 +1,32 @@
+ALGORITHM AnalysePhrase
+VAR
+    phrase: string;
+    charCount, wordCount, vowelCount: interger;
+    i: interger;
+BEGIN
+    write('Entrer une phrase:')
+
+    read(phrase);
+    charCount := 0;
+    wordCount := 0;
+    vowelCount := 0;
+
+
+    for i:= 1 length(phrase) do 
+      begin 
+      inc(charCount);
+
+      IF (
+        (phrase[i] = 'a') or (phrase[i] = 'e') or (phrase[i] = 'i') or (phrase[i] = 'o') or (phrase[i] = 'u') or
+       (phrase[i] = 'A') or (phrase[i] = 'E') or (phrase[i] = 'I') or (phrase[i] = 'O') or (phrase[i] = 'U') 
+       THEN
+      inc(vowelCount);
+        
+      ) 
+        
+      END_IF
+      inc(wordCount);
+       writeln('Longueur de la phrase: ', charCount, ' caractères');
+  writeln('Nombre de mots dans la phrase: ', wordCount);
+  writeln('Nombre de voyelles dans la phrase: ', vowelCount);
+end.
